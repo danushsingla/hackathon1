@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('https://images.unsplash.com/photo-1508766206392-8bd5cf550d1f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNDAwNTd8MHwxfGFsbHwxfHx8fHx8fHwxNjk4NjA5MDMy&ixlib=rb-4.0.3&q=80&w=1080') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    /* color: #fefefe; */
+ }
+ 
+ 
+ .header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    text-align: center;
+    color: #fefefe;
+ }
+ 
+ 
+ .header h1 {
+    margin: 0;
+    font-size: 36px;
+    font-weight: bold;
+ }
+ 
+ 
+ .container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    color: #fefefe;
+ }
+ 
+ 
+ .game {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+ }
+ 
+ 
+ .game h2 {
+    margin-top: 0;
+ }
+ 
+ 
+ .input-group {
+    margin-bottom: 15px;
+ }
+ 
+ 
+ .input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+ }
+ 
+ 
+ .input-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+ }
+ 
+ 
+ .submit-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s;
+ }
+ 
+ 
+ .submit-btn:hover {
+    background: #0056b3;
+ }
+ 

@@ -9,18 +9,21 @@ import TrackPage from './TrackPage.js';
 import SoccerPage from './SoccerPage.js';
 import SwimmingPage from './SwimmingPage.js';
 import './index.css';
+import { UserProvider } from './UserContext';
 
 ReactDOM.render(
-  <Router>
-    <Switch>
-      <Route exact path="/" component={App} />
-      <Route path="/home" component={HomePage} />
-      <Route path="/events" component={EventPage} />
-      <Route path="/basketball" component={BasketballPage} />
-      <Route path="/track" component={TrackPage} />
-      <Route path="/soccer" component={SoccerPage} />
-      <Route path="/swimming" component={SwimmingPage} />
-    </Switch>
-  </Router>,
+  <UserProvider>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={App} />
+        <Route path="/home" component={HomePage} />
+        <Route path="/events" component={EventPage} />
+        <Route path="/basketball" component={BasketballPage} />
+        <Route path="/track" component={TrackPage} />
+        <Route path="/soccer" component={SoccerPage} />
+        <Route path="/swimming" component={SwimmingPage} />
+      </Switch>
+    </Router>,
+  </UserProvider>,
   document.getElementById('root')
 );

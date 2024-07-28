@@ -1,15 +1,21 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
-// EventWidget component to display individual events
-const EventWidget = ({ image, title, link }) => (
-  <a href={link} style={styles.widget}>
-    <h3 style={styles.title}>{title}</h3> {/* Title above the image */}
+// Modify EventWidget to include user data in the navigation
+const EventWidget = ({ image, title, link, user }) => (
+  <Link
+    to={{ pathname: `/${link}`, state: { user } }}
+    style={styles.widget}
+  >
+    <h3 style={styles.title}>{title}</h3>
     <img src={image} alt={title} style={styles.widgetImage} />
-  </a>
+  </Link>
 );
 
-// EventPage component to display a list of events
 const EventPage = () => {
+  const location = useLocation();
+  const user = location.state?.user; // Retrieve user data from location state
+
   // Array of event objects
   const events = [
     {
@@ -47,6 +53,7 @@ const EventPage = () => {
           image={event.image}
           title={event.title}
           link={event.link}
+          user={user} // Pass user data
         />
       ))}
     </div>
