@@ -1,20 +1,16 @@
 import React from 'react';
-import { createRoot } from 'react-dom'; // Import createRoot from react-dom/client
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ReactDOM from 'react-dom'; // Use 'react-dom' for React 17
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'; // Switch is used in v5
 import App from './App';
 import HomePage from './HomePage';
 import './index.css';
 
-// Create a root element
-const rootElement = document.getElementById('root');
-const root = createRoot(rootElement);
-
-// Render the application
-root.render(
+ReactDOM.render(
   <Router>
-    <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="/home" element={<HomePage />} />
-    </Routes>
-  </Router>
+    <Switch>
+      <Route exact path="/" component={App} />
+      <Route path="/home" component={HomePage} />
+    </Switch>
+  </Router>,
+  document.getElementById('root')
 );
