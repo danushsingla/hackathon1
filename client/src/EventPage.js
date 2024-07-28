@@ -14,23 +14,23 @@ const EventPage = () => {
   const events = [
     {
       image: 'https://via.placeholder.com/250x150',
-      title: 'Event 1',
-      link: '#event1',
+      title: 'Basketball',
+      link: 'basketball',
     },
     {
       image: 'https://via.placeholder.com/250x150',
-      title: 'Event 2',
-      link: '#event2',
+      title: 'Track',
+      link: 'track',
     },
     {
       image: 'https://via.placeholder.com/250x150',
-      title: 'Event 3',
-      link: '#event3',
+      title: 'Soccer',
+      link: 'soccer',
     },
     {
       image: 'https://via.placeholder.com/250x150',
-      title: 'Event 4',
-      link: '#event4',
+      title: 'Swimming',
+      link: 'swimming',
     },
     {
       image: 'https://via.placeholder.com/250x150',
