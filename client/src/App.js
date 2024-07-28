@@ -1,6 +1,5 @@
 import './App.css';
 import LoginButton from './components/login.js';
-import LogoutButton from './components/logout.js';
 import { useEffect } from 'react';
 import { gapi } from 'gapi-script';
 import { useHistory } from "react-router-dom";
@@ -34,7 +33,6 @@ function App() {
   return (
     <div className="App">
       <LoginButton onLoginResult={handleLoginResult} />
-      <LogoutButton />
     </div>
   );
 }

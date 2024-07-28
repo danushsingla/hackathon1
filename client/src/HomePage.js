@@ -1,6 +1,7 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
 import { useLocation } from 'react-router-dom';
+import LogoutButton from './components/logout.js';
 
 // Define styles directly in the component file
 const useStyles = createUseStyles({
@@ -28,6 +29,7 @@ const HomePage = () => {
           <p><strong>Email:</strong> {user.email}</p>
         </div>
       )}
+      <LogoutButton />
     </div>
   );
 };
