@@ -2,6 +2,7 @@ import React from 'react';
 import { createUseStyles } from 'react-jss';
 import { useLocation } from 'react-router-dom';
 import LogoutButton from './components/logout.js';
+import { useHistory } from 'react-router-dom';
 
 // Define styles directly in the component file
 const useStyles = createUseStyles({
@@ -19,6 +20,7 @@ const HomePage = () => {
   const classes = useStyles(); // Use the defined styles
   const location = useLocation(); // Get location object
   const user = location.state?.user; // Access user details from state
+  const history = useHistory();
 
   return (
     <div className={classes.container}>
@@ -30,6 +32,7 @@ const HomePage = () => {
         </div>
       )}
       <LogoutButton />
+      <button onClick={() => history.push('/events')}>Browse</button> {/* Browse button */}
     </div>
   );
 };
