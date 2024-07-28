@@ -7,12 +7,14 @@ function Login({onLoginResult}) {
 
     const goodResponse = (response) => {
         console.log('Google response:', response);
-        onLoginResult(true); // Call the onSuccess callback
+        const username = response.profileObj.name;
+        const email = response.profileObj.email;
+        onLoginResult(true, { username, email }); // Call the onSuccess callback
       };
     
     const badResponse = (response) => {
         console.log('Google response:', response);
-        onLoginResult(false); // Call the onError callback
+        onLoginResult(false, null); // Call the onError callback
     };
 
     return (

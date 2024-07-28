@@ -21,9 +21,9 @@ function App() {
     gapi.load('client:auth2', start);
   }, []); // runs only once with []
 
-  const handleLoginResult = (success) => {
+  const handleLoginResult = (success, userDetails) => {
     if (success) {
-      history.push('/home'); // Redirect to Home if login is successful
+      history.push('/home', { user: userDetails }); // Redirect to Home if login is successful and push user information
     } else {
       // Handle login failure, maybe show an error message
       console.log('Login failed');
